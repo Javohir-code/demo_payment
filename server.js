@@ -34,7 +34,7 @@ const PORT = process.env.PORT || 8080;
 
 async function start() {
   try {
-    mongoose.connect("mongodb://localhost/click", {
+    mongoose.connect(process.env.DATABASE, {
       useNewUrlParser: true,
       useFindAndModify: false,
       useUnifiedTopology: true,
