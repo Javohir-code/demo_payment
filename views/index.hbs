@@ -1,0 +1,33 @@
+<div class="row mt-5">
+    <div class="col-md-6 offset-3">
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title">Random Товар</h4>
+                <p class="card-text">Цена: 1000 сум</p>
+                <form action="https://my.click.uz/services/pay" id="click_form" method="get" >
+                    <input type="hidden" name="amount" value="{{amount}}" />
+                    <input type="hidden" name="merchant_id" value="{{merchant_id}}"/>
+                    <input type="hidden" name="merchant_user_id" value="{{merchant_user_id}}"/>
+                    <input type="hidden" name="service_id" value="{{service_id}}"/>
+                    <input type="hidden" name="transaction_param" value="{{transaction_param}}"/>
+                    <input type="hidden" name="return_url" value="{{return_url}}"/>
+                    <input type="hidden" name="card_type" value="{{card_type}}"/>
+                    <button type="submit" class="btn btn-success"><i></i>Оплатить через CLICK</button>                         
+                </form>
+                <form method="post" action="{{return_url}}">
+                    <script src="https://my.click.uz/pay/checkout.js"
+                        class="uzcard_payment_button"
+                        data-service-id="{{service_id}}"
+                        data-merchant-id="{{merchant_id}}"
+                        data-transaction-param="{{transaction_param}}"
+                        data-merchant-user-id="{{merchant_user_id}}"
+                        data-amount="{{amount}}"
+                        data-card-type="{{card_type}}"
+                        data-label="Оплатить" <!-- Текст кнопки оплаты -->
+                    ></script>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

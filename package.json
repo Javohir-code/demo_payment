@@ -1,0 +1,27 @@
+{
+  "name": "click_payme",
+  "version": "1.0.0",
+  "description": "integration click and payme with node js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "click",
+    "payme"
+  ],
+  "author": "Bexruz Xolmuminov <bexruzxolmuminov@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "handlebars": "^4.7.6",
+    "mongoose": "^5.10.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
